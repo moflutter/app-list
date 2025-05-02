@@ -1,99 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>My App Collection</title>
   <style>
-    body { 
-      font-family: sans-serif; 
+    body {
+      font-family: sans-serif;
       background: linear-gradient(135deg, #ffffff, #f7f7f7);
-      margin: 0; 
-      padding: 20px; 
-      line-height: 1.6; 
+      margin: 0;
+      padding: 20px;
+      line-height: 1.6;
       overflow-x: hidden;
+      text-align: center; /* ✅ 全体中央揃え */
     }
-    h1, h2 { text-align: center; }
-    .button { 
-      display: inline-block; 
-      margin: 10px; 
-      padding: 10px 20px; 
-      background: linear-gradient(90deg, #007bff, #0056b3); 
-      color: white; 
-      text-decoration: none; 
-      border-radius: 8px; 
-      font-size: 16px; 
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
-      transition: background 0.3s, transform 0.3s;
+
+    h1, h2, p {
+      text-align: center;
     }
-    .button:hover {
-      background: linear-gradient(90deg, #0056b3, #003d82);
-      transform: translateY(-2px);
+
+    .app-section {
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
-    .app-section { 
-      margin-top: 30px; 
-      display: flex; 
-      flex-direction: column; 
-      align-items: center; 
-    }
-    .app { 
-      background: white; 
-      margin-bottom: 40px; 
-      padding: 20px; 
-      width: 90%; 
-      max-width: 600px; 
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+
+    .app {
+      background: white;
+      margin-bottom: 40px;
+      padding: 20px;
+      width: 90%;
+      max-width: 600px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       border-radius: 12px;
       opacity: 0;
       transform: translateY(20px);
       animation: fadeInUp 1s forwards;
     }
-    img { 
-      max-width: 90%; 
-      height: auto; 
-      border: 1px solid #ccc; 
-      border-radius: 8px; 
+
+    img.app-icon {
+      width: 128px;
+      height: 128px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
       margin-top: 10px;
     }
+
+    .store-buttons {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .store-buttons img {
+      width: 150px; /* ✅ 同じサイズに統一 */
+      height: auto;
+    }
+
     @keyframes fadeInUp {
       to {
         opacity: 1;
         transform: translateY(0);
       }
     }
+
     @media (max-width: 600px) {
-      h1 { font-size: 24px; }
-      .button { font-size: 14px; padding: 8px 16px; }
+      h1 {
+        font-size: 24px;
+      }
     }
   </style>
 </head>
 <body>
-
-  <!-- ヘッダー部分 -->
   <h1>Welcome to Series of Sylph's Adventure</h1>
-  <p style="text-align: center;">Simple, lightweight games you can enjoy anytime.</p>
+  <p>Simple, lightweight games you can enjoy anytime.</p>
 
-  <!-- アプリ紹介セクション -->
   <div class="app-section">
-
     <div class="app">
       <h2>Critical Calligraphy Chanting</h2>
-      <img loading="lazy" src="critical.png" alt="Critical Calligraphy Chanting" width="128" height="128">
+      <img class="app-icon" src="critical.png" alt="Critical Calligraphy Chanting" />
       <p>Challenge your mind with mystical calligraphy puzzles!</p>
-      <div style="text-align: center; margin-top: 20px;">
-        <a class="button" href="https://play.google.com/store/apps/details?id=com.moto.kigou&hl=en-US&ah=g_KdKNW26goZTLOkL97kC6AnFZo&pli=1" target="_blank">Download for Android</a>
-        <a class="button" href="https://apps.apple.com/jp/app/critical-calligraphy-chanting/id6667120015" target="_blank">Download for iOS</a>
+      <div class="store-buttons">
+        <a href="https://play.google.com/store/apps/details?id=com.moto.kigou" target="_blank">
+          <img src="Android.png" alt="Download for Android" />
+        </a>
+        <a href="https://apps.apple.com/jp/app/critical-calligraphy-chanting/id6667120015" target="_blank">
+          <img src="iOS.svg" alt="Download for iOS" />
+        </a>
       </div>
     </div>
 
     <div class="app">
       <h2>Ground to Air Slicer</h2>
-      <img loading="lazy" src="slicer.png" alt="Ground to Air Slicer" width="128" height="128">
+      <img class="app-icon" src="slicer.png" alt="Ground to Air Slicer" />
       <p>Fast-paced slicing action to save the skies!</p>
-      <a class="button" href="https://apps.apple.com/jp/app/ground-to-air-slicer/id6608967591" target="_blank">Download for iOS</a>
+      <div class="store-buttons">
+        <a href="https://apps.apple.com/jp/app/ground-to-air-slicer/id6608967591" target="_blank">
+          <img src="iOS.svg" alt="Download for iOS" />
+        </a>
+      </div>
     </div>
-
   </div>
-
 </body>
 </html>
