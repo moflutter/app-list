@@ -1,6 +1,6 @@
 
 .animated-gradient-text {
-  font-size: 64px;
+  font-size: 32px;
   font-weight: bold;
   background: linear-gradient(270deg,
     #ff5f6d, #ffc371, #47e891, #4facfe, #ff5f6d);
