@@ -1,6 +1,6 @@
 
 .static-gradient-text {
-  font-size: 24px;
+  font-size: 40px;
   font-weight: bold;
   background: linear-gradient(90deg, #ff5f6d, #ffc371);
   -webkit-background-clip: text;
