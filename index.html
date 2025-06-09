@@ -113,20 +113,12 @@
   </div>
 
 <script>
-  const ua = navigator.userAgent;
-
-  // iOS（iPhone, iPad, iPod）またはMac（macOS Safari や Mac Chrome）を判定
-  const isAnyDevice = /iPad|iPhone|iPod|Macintosh|Android|Windows|Linux/.test(ua);
-
-  if (isAppleDevice) {
-    // 背景画像を iOS / Mac 用に差し替える
-    document.addEventListener("DOMContentLoaded", () => {
-      document.body.style.backgroundImage = "url('jpgrey1.jpg')";
-      document.body.style.backgroundSize = "cover";
-      document.body.style.backgroundRepeat = "no-repeat";
-      document.body.style.backgroundAttachment = "fixed";
-    });
-  }
+  document.addEventListener("DOMContentLoaded", () => {
+    document.body.style.backgroundImage = "url('jpgrey1.jpg')";
+    document.body.style.backgroundSize = "cover";
+    document.body.style.backgroundRepeat = "no-repeat";
+    document.body.style.backgroundAttachment = "fixed";
+  });
 </script>
 
 
