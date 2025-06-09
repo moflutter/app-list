@@ -116,7 +116,7 @@
   const ua = navigator.userAgent;
 
   // iOS（iPhone, iPad, iPod）またはMac（macOS Safari や Mac Chrome）を判定
-  const isAppleDevice = /iPad|iPhone|iPod|Macintosh/.test(ua);
+  const isAnyDevice = /iPad|iPhone|iPod|Macintosh|Android|Windows|Linux/.test(ua);
 
   if (isAppleDevice) {
     // 背景画像を iOS / Mac 用に差し替える
